@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    Sathi Resturant — Premium Modern Theme
    ============================================================ */
 
@@ -3117,6 +3117,25 @@ footer p {
     border: 1px solid var(--glass-border) !important;
     background: var(--bg-dark) !important;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.food-card-img-box.placeholder-box {
+    background: linear-gradient(135deg, rgba(201, 162, 75, 0.08), rgba(201, 162, 75, 0.03)) !important;
+    border: 1.5px dashed rgba(201, 162, 75, 0.3) !important;
+}
+
+.food-card-img-box .placeholder-icon {
+    font-size: 2.3rem;
+    color: rgba(201, 162, 75, 0.4);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), color 0.3s ease;
+}
+
+.food-menu-card:hover .food-card-img-box .placeholder-icon {
+    transform: scale(1.18) rotate(6deg);
+    color: var(--accent-gold);
 }
 
 .food-card-img-box img {
@@ -4108,3 +4127,40 @@ footer p {
 .main-menu-scroll-track .food-menu-card {
     touch-action: pan-x pan-y !important;
 }
+
+/* ============================================================
+   FOOD CARD IMAGE PLACEHOLDER STYLES
+   ============================================================ */
+.food-card-img-box.placeholder-box {
+    background: linear-gradient(135deg, rgba(201, 162, 75, 0.08) 0%, rgba(201, 162, 75, 0.02) 100%);
+    border: 1.5px dashed rgba(201, 162, 75, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    width: 100%;
+    border-radius: var(--radius-sm, 8px);
+    margin-bottom: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.food-menu-card:hover .food-card-img-box.placeholder-box {
+    border-color: var(--accent-gold, #c9a24b);
+    background: linear-gradient(135deg, rgba(201, 162, 75, 0.15) 0%, rgba(201, 162, 75, 0.05) 100%);
+    transform: translateY(-2px);
+}
+
+.placeholder-icon {
+    font-size: 2.5rem;
+    color: var(--accent-gold, #c9a24b);
+    opacity: 0.65;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.food-menu-card:hover .placeholder-icon {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 0.95;
+}
+
